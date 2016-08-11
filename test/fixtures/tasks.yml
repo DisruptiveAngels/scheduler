@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  task_tile: MyString
+  responsible: MyString
+  percentage: 1.5
+  advancement: 1.5
+  pond_adv: 
+
+two:
+  task_tile: MyString
+  responsible: MyString
+  percentage: 1.5
+  advancement: 1.5
+  pond_adv: 

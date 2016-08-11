@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  story_title: MyString
+  type: 
+  start_date: 2016-08-11 17:34:46
+  end_date: 2016-08-11 17:34:46
+
+two:
+  story_title: MyString
+  type: 
+  start_date: 2016-08-11 17:34:46
+  end_date: 2016-08-11 17:34:46
