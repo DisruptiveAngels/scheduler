@@ -10,6 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160811223812) do
+
+  create_table "meetings", force: :cascade do |t|
+    t.string   "subject"
+    t.datetime "appointment"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "milestones", force: :cascade do |t|
+    t.string   "story_title"
+    t.string   "type"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.string   "task_tile"
+    t.string   "responsible"
+    t.float    "percentage"
+    t.float    "advancement"
+    t.float    "pond_adv"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "themes", force: :cascade do |t|
+    t.string   "theme_title"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
 end

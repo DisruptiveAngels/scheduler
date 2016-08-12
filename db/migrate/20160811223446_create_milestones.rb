@@ -2,7 +2,7 @@ class CreateMilestones < ActiveRecord::Migration[5.0]
   def change
     create_table :milestones do |t|
       t.string :story_title
-      t.enum :type
+      t.string :type
       t.datetime :start_date
       t.datetime :end_date
 

@@ -5,7 +5,7 @@ class CreateTasks < ActiveRecord::Migration[5.0]
       t.string :responsible
       t.float :percentage
       t.float :advancement
-      t.floar :pond_adv
+      t.float :pond_adv
 
       t.timestamps
     end
