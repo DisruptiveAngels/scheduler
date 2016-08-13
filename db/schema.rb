@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160811223812) do
+ActiveRecord::Schema.define(version: 20160813011208) do
 
   create_table "meetings", force: :cascade do |t|
     t.string   "subject"
     t.datetime "appointment"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "projects_id"
+    t.index ["projects_id"], name: "index_meetings_on_projects_id"
   end
 
   create_table "milestones", force: :cascade do |t|
@@ -26,11 +28,15 @@ ActiveRecord::Schema.define(version: 20160811223812) do
     t.datetime "end_date"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "projects_id"
+    t.index ["projects_id"], name: "index_milestones_on_projects_id"
   end
 
   create_table "projects", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "title"
+    t.string   "company"
   end
 
   create_table "tasks", force: :cascade do |t|
@@ -41,12 +47,16 @@ ActiveRecord::Schema.define(version: 20160811223812) do
     t.float    "pond_adv"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "themes_id"
+    t.index ["themes_id"], name: "index_tasks_on_themes_id"
   end
 
   create_table "themes", force: :cascade do |t|
     t.string   "theme_title"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "projects_id"
+    t.index ["projects_id"], name: "index_themes_on_projects_id"
   end
 
 end
